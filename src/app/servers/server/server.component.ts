@@ -9,7 +9,7 @@ import { ServersService } from '../servers.service';
 })
 export class ServerComponent implements OnInit {
   server: {id: number, name: string, status: string} | any ;
-
+  
   constructor(private serversService: ServersService) { }
 
   ngOnInit() {
