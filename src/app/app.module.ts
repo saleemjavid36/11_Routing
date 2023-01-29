@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AuthGaurdService } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
+import { CanDeactivateGaurd } from './servers/edit-server/can-deacitivate-gaurd.service';
 
 
 
@@ -36,7 +37,7 @@ import { AuthService } from './auth.service';
     NgbModule
     
   ],
-  providers: [ServersService,AuthGaurdService,AuthService],
+  providers: [ServersService,AuthGaurdService,AuthService,CanDeactivateGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
