@@ -1,3 +1,7 @@
+// import { Server } from 'path/to/server.interface';
+
+
+
 export class ServersService {
   private servers = [
     {
@@ -15,7 +19,7 @@ export class ServersService {
       name: 'Devserver',
       status: 'offline'
     }
-  ];
+  ] ;
 
   getServers() {
     return this.servers;
@@ -29,6 +33,11 @@ export class ServersService {
     );
     return server;
   }
+
+  // getServer(id:number):Server{
+  //   const server=this.servers.find((s)=>s.id === id)
+  //   return server
+  // }
 
   updateServer(id: number, serverInfo: {name: string, status: string}) {
     const server = this.servers.find(

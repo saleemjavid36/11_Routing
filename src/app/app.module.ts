@@ -17,6 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthGaurdService } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
 import { CanDeactivateGaurd } from './servers/edit-server/can-deacitivate-gaurd.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { ServerResolver } from './servers/server/server-resolver.service';
 
 
 
@@ -28,7 +30,8 @@ import { CanDeactivateGaurd } from './servers/edit-server/can-deacitivate-gaurd.
     ServersComponent,
     UserComponent,
     EditServerComponent,
-    ServerComponent
+    ServerComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { CanDeactivateGaurd } from './servers/edit-server/can-deacitivate-gaurd.
     NgbModule
     
   ],
-  providers: [ServersService,AuthGaurdService,AuthService,CanDeactivateGaurd],
+  providers: [ServersService,AuthGaurdService,AuthService,CanDeactivateGaurd,ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
